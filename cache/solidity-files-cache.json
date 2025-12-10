@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\INGLOYNCA_HP\\Desktop\\niurka-contrato-hardhat\\contracts\\MiPrimerContrato.sol": {
+      "lastModificationDate": 1765380208730,
+      "contentHash": "d3b0afefd662861fc3ac32257b42ffd9",
+      "sourceName": "contracts/MiPrimerContrato.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "MiPrimerContrato"
+      ]
+    }
+  }
+}
