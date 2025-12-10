@@ -52,10 +52,21 @@ npm install
 
 3. Configurar variables de entorno:
 
-Crear archivo `.env` en la raíz del proyecto:
+Crea un archivo `.env` en la raíz del proyecto basándote en `.env.example`:
+```bash
+cp .env.example .env
+```
+
+Luego edita `.env` con tus credenciales reales:
 ```env
-SEPOLIA_RPC_URL=tu_url_rpc_de_sepolia
-PRIVATE_KEY=tu_clave_privada_sin_0x
+SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/tu_api_key_real
+PRIVATE_KEY=tu_clave_privada_real_sin_0x
+```
+
+**⚠️ IMPORTANTE:** 
+- El archivo `.env` está en `.gitignore` y NO debe subirse a GitHub
+- Solo sube `.env.example` con valores de ejemplo
+- Nunca compartas tu clave privada o API keys
 ```
 
 ## 📝 Estructura del Proyecto
@@ -143,13 +154,28 @@ Para verificar las transacciones y el estado del contrato:
 
 ## 🛡️ Seguridad
 
-⚠️ **IMPORTANTE - Medidas de seguridad:**
+### Variables de Entorno
 
-- ✅ Nunca compartas tu clave privada
-- ✅ El archivo `.env` está incluido en `.gitignore` y NO se sube a GitHub
-- ✅ Este proyecto es solo para fines educativos en testnet (Sepolia)
-- ✅ No uses estas claves en mainnet (red principal de Ethereum)
-- ✅ Los fondos utilizados son ETH de prueba sin valor real
+Este proyecto utiliza variables de entorno para información sensible:
+
+- ✅ **`.env.example`**: Plantilla con nombres de variables (incluido en el repo)
+- ❌ **`.env`**: Archivo con tus credenciales reales (NO incluido en el repo)
+- ✅ **`.gitignore`**: Asegura que `.env` nunca se suba a GitHub
+
+### Buenas Prácticas Implementadas
+
+✅ Archivo `.env` excluido del control de versiones  
+✅ Plantilla `.env.example` proporcionada para configuración  
+✅ Claves privadas y API keys nunca expuestas públicamente  
+✅ Documentación clara sobre configuración de seguridad  
+
+### ⚠️ Recordatorios Importantes
+
+- **Nunca** hagas commit del archivo `.env`
+- **Nunca** compartas tu clave privada con nadie
+- **Nunca** uses claves de testnet en mainnet
+- **Siempre** verifica el `.gitignore` antes del primer commit
+- Este proyecto usa testnet (Sepolia) - los fondos no tienen valor real
 
 ## 📚 Aprendizajes
 
